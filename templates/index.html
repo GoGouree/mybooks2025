@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Repository</title>
+</head>
+<body>
+    <h1>Welcome to the Book Repository</h1>
+    <ul>
+        {% for book in books %}
+            <li><a href="{{ url_for('book_detail', title=book) }}">{{ book }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
